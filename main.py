@@ -13,7 +13,16 @@ skills =["Hard- und Software","Betriebssysteme","Netzwerke","Cloud Computing","A
 @app.get("/",response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("index.html", {"request" : request, "name" : name, "skills" : skills})
+@app.get("/kontakt", response_class=HTMLResponse)
+async def get_form(request: Request):
+        return templates.TemplateResponse("/kontakt/kontakt.html", {"request" : request})
+@app.post("/kontakt", response_class=HTMLResponse)
+async def post_form(request: Request):
+        return templates.TemplateResponse("/kontakt/kontakt.html", {"request" : request})
 
+if __name__ == "__main__":
+       import uvicorn 
+       uvicorn.run(app, host="127.0.0.1", port=8000)
 
 
 
