@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    <h2>Informations- und Telekommunikations System Elektroniker</h2>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+        <h3>Etwas über mich</h3>
+        <p>IT- Systemelektroniker in Cloud- DevOps Engineer Weiterbildung</p>
+        <section>
+        <h3>Skills</h3>
+        <p>Lebenslanges Lernen</p>
+        <section>
+        <ul>
+            {% for skill in skills %}
+            <li>{{skill}}</li>
+            {% endfor %}
+        </ul>
+        
+        <section>
+        <h3>Kontakt</h3>
+
+        <form action="sendeadresse">me@email.com</form>
+        </section>
+        <footer>
+            <h3>Credits</h3>
+            <p>Danke an
+                <a href="https://www.techstarter.de" target="_blank">Techstarter</a>
+    
+            </p>
+            </footer>
+    </main>
+</body>
+</html>
