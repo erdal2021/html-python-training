@@ -7,7 +7,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 name = "Erdal Erdogan"
 
-skills =["Hard- und Software","Betriebssysteme","Netzwerke","Cloud Computing","AWS","Git", "Python, VSCode", "CMS", "Musik"]
+skills =["Hard- und Software", "Betriebssysteme", "Netzwerke", "Open Source Software", "Cloud Computing", "AWS", "Git", "Python, VSCode, html, css, js, php", "CMS", "Musik"]
 
 
 @app.get("/",response_class=HTMLResponse)
